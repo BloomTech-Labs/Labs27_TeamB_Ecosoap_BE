@@ -1,0 +1,8 @@
+{
+  "@lambdalabs/generator-api": {
+    "promptValues": {
+      "program": "labs",
+      "repoUrl": "git@github.com:Lambda-School-Labs/ecosoap-be-node.git"
+    }
+  }
+}
