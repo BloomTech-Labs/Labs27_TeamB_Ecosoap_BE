@@ -13,7 +13,6 @@ exports.up = (knex) => {
       orders
         .integer('buyer_id')
         .unsigned()
-        .notNullable()
         .references('id')
         .inTable('profiles');
       orders.string('organization_name').notNullable();
