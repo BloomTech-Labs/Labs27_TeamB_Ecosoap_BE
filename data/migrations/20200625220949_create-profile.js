@@ -16,7 +16,12 @@ exports.up = (knex) => {
         .notNullable()
         .references('id')
         .inTable('profiles');
-      orders.string('order_number');
+      orders.string('organization_name').notNullable();
+      orders.string('contact_name').notNullable();
+      orders.integer('bars_requested').notNullable();
+      orders.string('contact_email').notNullable();
+      orders.string('country').notNullable();
+      orders.integer('beneficiaries').notNullable();
     });
 };
 
