@@ -3,6 +3,8 @@ const authRequired = require('../middleware/authRequired');
 const Profiles = require('./profileModel');
 const router = express.Router();
 
+//API ADDRESS: http://35.208.9.187:9192/web-api-2
+
 /**
  * @swagger
  * components:
