@@ -17,9 +17,9 @@ exports.up = (knex) => {
         .inTable('profiles');
       orders.string('organization_name').notNullable();
       orders.string('contact_name').notNullable();
-      orders.integer('bars_requested').notNullable();
       orders.string('contact_email').notNullable();
       orders.string('country').notNullable();
+      orders.integer('bars_requested').notNullable();
       orders.integer('beneficiaries').notNullable();
     });
 };
