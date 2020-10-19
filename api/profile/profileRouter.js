@@ -3,8 +3,6 @@ const authRequired = require('../middleware/authRequired');
 const Profiles = require('./profileModel');
 const router = express.Router();
 
-//API ADDRESS: http://35.208.9.187:9192/web-api-2
-
 /**
  * @swagger
  * components:
@@ -220,7 +218,7 @@ router.post('/', authRequired, async (req, res) => {
  *                profile:
  *                  $ref: '#/components/schemas/Profile'
  */
-router.put('/', authRequired, function(req, res) {
+router.put('/', authRequired, function (req, res) {
   const profile = req.body;
   if (profile) {
     const id = profile.id || 0;
@@ -277,7 +275,7 @@ router.put('/', authRequired, function(req, res) {
  *                profile:
  *                  $ref: '#/components/schemas/Profile'
  */
-router.delete('/:id', authRequired, function(req, res) {
+router.delete('/:id', authRequired, function (req, res) {
   const id = req.params.id;
   try {
     Profiles.findById(id).then((profile) => {
