@@ -2,6 +2,7 @@ const express = require('express');
 const authRequired = require('../middleware/authRequired');
 const Profiles = require('./profileModel');
 const router = express.Router();
+const fetch = require('node-fetch');
 
 /**
  * @swagger
@@ -291,6 +292,37 @@ router.delete('/:id', authRequired, function (req, res) {
       error: err.message,
     });
   }
+});
+
+router.get('/price', (req, res) => {
+  fetch('http://35.208.9.187:9192/web-api-2', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      query: `
+          {
+              checkIfPrice(
+                input:{
+                  organizationName
+                  contactName
+                  barsRequested
+                  contactEmailAddress
+                  country
+                  beneficiaries
+                }
+              )
+              {
+                hasPrice
+                price
+              }
+          }
+          `,
+    }),
+  })
+    .then((res) => res.json())
+    .then((data) => {
+      res.status(200).json(data);
+    });
 });
 
 module.exports = router;

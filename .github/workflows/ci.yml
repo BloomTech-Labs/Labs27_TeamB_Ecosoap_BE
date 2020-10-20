@@ -58,4 +58,5 @@ jobs:
     //   "!**/apidoc/**"
     // ]
 
-  #  "coverage": "CI=true npx jest --coverage --detectOpenHandles --forceExit" 
+ #  "coverage": "CI=true npx jest --coverage --detectOpenHandles --forceExit" 
+
