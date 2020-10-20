@@ -7,18 +7,18 @@ const fetch = require('node-fetch');
 // making a POST request to see if we can get a verification of price for desired quantity of soap.
 
 router.post('/', (req, res) => {
-  const { 
+  const {
     organizationName,
     contactName,
     barsRequested,
     contactEmailAddress,
     country,
     beneficiaries,
-  } = req.body; 
+  } = req.body;
   // the fetch below queries to StakeHolder's API to return price
   // of requested bars of soap
   fetch('http://35.208.9.187:9192/web-api-2', {
-    method: 'POST', 
+    method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
       query: `
@@ -45,20 +45,19 @@ router.post('/', (req, res) => {
     .then((data) => {
       // console.log(data.data.checkIfPrice,'the data from the call')
 
-      // depending on what we get from the result, if we get 
+      // depending on what we get from the result, if we get
 
       if (data.data.checkIfPrice.hasPrice === true) {
         // console.log('TRUEEEEEEEEEEEE')
-        res
-        .status(200)
-          .json({
-            data:data,
-            message: `Your Order for quantity of ${barsRequested} bars of soap will be a total of $ ${data.data.checkIfPrice.price}`, 
-          });
+        res.status(200)
+        .json({
+          data:data,
+          message: `Your Order for quantity of ${barsRequested} bars of soap will be a total of $ ${data.data.checkIfPrice.price}`, 
+        });
       }
     })
     .catch((err) => {
-      res.status(400).json({Error: err.message }); 
+      res.status(400).json({ Error: err.message });
     });
 });
 // issues with request above,
@@ -67,4 +66,4 @@ router.post('/', (req, res) => {
 // that we want from our req.body and that is how we can correctly query for
 // a user to complete the order form
 
-module.exports = router; 
+module.exports = router;
