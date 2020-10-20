@@ -294,13 +294,8 @@ router.delete('/:id', authRequired, function(req, res) {
   }
 });
 
-
-
-
 router.get('/price', (req, res) =>{
-
   fetch('http://35.208.9.187:9192/web-api-2',{
-
     method: 'POST',
     headers: {'Content-Type': 'application/json'},
     body: JSON.stringify({
