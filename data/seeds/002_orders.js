@@ -13,6 +13,7 @@ exports.seed = function (knex) {
           country: 'USA',
           bars_requested: 100,
           beneficiaries: 10,
+          hygiene_description: 'Bad.',
         },
         {
           buyer_id: '00ulthapbErVUwVJy4x6',
@@ -22,6 +23,7 @@ exports.seed = function (knex) {
           country: 'USA',
           bars_requested: 50,
           beneficiaries: 5,
+          hygiene_description: 'Bad.',
         },
         {
           buyer_id: '00ulthapbErVUwVJy4x6',
@@ -31,6 +33,7 @@ exports.seed = function (knex) {
           country: 'USA',
           bars_requested: 200,
           beneficiaries: 20,
+          hygiene_description: 'Bad.',
         },
       ]);
     });
