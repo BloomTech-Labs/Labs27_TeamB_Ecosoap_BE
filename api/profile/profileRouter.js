@@ -295,9 +295,9 @@ router.delete('/:id', authRequired, function (req, res) {
 });
 
 router.get('/price', (req, res) => {
-  fetch ('http://35.208.9.187:9192/web-api-2', {
+  fetch('http://35.208.9.187:9192/web-api-2', {
     method: 'POST',
-    headers: {'Content-Type': 'application/json' },
+    headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
       query: `
           {
@@ -319,9 +319,9 @@ router.get('/price', (req, res) => {
           `,
     }),
   })
-    .then(res => res.json())
-    .then(data =>{
-      res.status(200).json(data)
-    })
+    .then((res) => res.json())
+    .then((data) =>{
+      res.status(200).json(data);
+    });
 });
 module.exports = router;
