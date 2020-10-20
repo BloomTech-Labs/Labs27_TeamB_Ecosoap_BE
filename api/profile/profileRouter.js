@@ -109,20 +109,20 @@ router.get('/', authRequired, function (req, res) {
  *      404:
  *        description: 'Profile not found'
  */
-// router.get('/:id', authRequired, function (req, res) {
-//   const id = String(req.params.id);
-//   Profiles.findById(id)
-//     .then((profile) => {
-//       if (profile) {
-//         res.status(200).json(profile);
-//       } else {
-//         res.status(404).json({ error: 'ProfileNotFound' });
-//       }
-//     })
-//     .catch((err) => {
-//       res.status(500).json({ error: err.message });
-//     });
-// });
+router.get('/:id', authRequired, function (req, res) {
+  const id = String(req.params.id);
+  Profiles.findById(id)
+    .then((profile) => {
+      if (profile) {
+        res.status(200).json(profile);
+      } else {
+        res.status(404).json({ error: 'ProfileNotFound' });
+      }
+    })
+    .catch((err) => {
+      res.status(500).json({ error: err.message });
+    });
+});
 
 /**
  * @swagger
