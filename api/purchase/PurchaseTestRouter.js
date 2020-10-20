@@ -49,10 +49,9 @@ router.post('/', (req, res) => {
 
       if (data.data.checkIfPrice.hasPrice === true) {
         // console.log('TRUEEEEEEEEEEEE')
-        res.status(200)
-        .json({
-          data:data,
-          message: `Your Order for quantity of ${barsRequested} bars of soap will be a total of $ ${data.data.checkIfPrice.price}`, 
+        res.status(200).json({
+          data: data,
+          message: `Your Order for quantity of ${barsRequested} bars of soap will be a total of $ ${data.data.checkIfPrice.price}`,
         });
       }
     })
