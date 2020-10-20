@@ -219,7 +219,7 @@ router.post('/', authRequired, async (req, res) => {
  *                profile:
  *                  $ref: '#/components/schemas/Profile'
  */
-router.put('/', authRequired, function(req, res) {
+router.put('/', authRequired, function (req, res) {
   const profile = req.body;
   if (profile) {
     const id = profile.id || 0;
@@ -276,7 +276,7 @@ router.put('/', authRequired, function(req, res) {
  *                profile:
  *                  $ref: '#/components/schemas/Profile'
  */
-router.delete('/:id', authRequired, function(req, res) {
+router.delete('/:id', authRequired, function (req, res) {
   const id = req.params.id;
   try {
     Profiles.findById(id).then((profile) => {
@@ -294,12 +294,12 @@ router.delete('/:id', authRequired, function(req, res) {
   }
 });
 
-router.get('/price', (req, res) =>{
-  fetch('http://35.208.9.187:9192/web-api-2',{
+router.get('/price', (req, res) => {
+  fetch ('http://35.208.9.187:9192/web-api-2', {
     method: 'POST',
-    headers: {'Content-Type': 'application/json'},
+    headers: {'Content-Type': 'application/json' },
     body: JSON.stringify({
-      query:`
+      query: `
           {
               checkIfPrice(
                 input:{
@@ -316,12 +316,12 @@ router.get('/price', (req, res) =>{
                 price
               }
           }
-          `
+          `,
+    }),
+  })
+    .then(res => res.json())
+    .then(data =>{
+      res.status(200).json(data)
     })
-  })
-  .then(res => res.json())
-  .then(data =>{
-    res.status(200).json(data)
-  })
-})
+});
 module.exports = router;
