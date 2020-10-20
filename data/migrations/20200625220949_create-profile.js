@@ -21,6 +21,7 @@ exports.up = (knex) => {
       orders.string('country').notNullable();
       orders.integer('bars_requested').notNullable();
       orders.integer('beneficiaries').notNullable();
+      orders.string('hygiene_description').notNullable();
     });
 };
 
