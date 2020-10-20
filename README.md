@@ -10,28 +10,26 @@ You can find the deployed project at https://labs27-ecosoap-teamb-api.herokuapp.
 [Dawna Backmeier](https://github.com/karanacesin)
 [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/karanacesin)
 [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/karanacesin) <br />
-<img src="https://www.dalesjewelers.com/wp-content/uploads/2018/10/placeholder-silhouette-female.png" width = "200" />
+<img src="https://media-exp1.licdn.com/dms/image/C5603AQFB_vldurzMxA/profile-displayphoto-shrink_200_200/0?e=1608163200&v=beta&t=MitFspuOpwfzboMHly06VKqIl9-AHUwMEIbdvR5c3VM" width = "200" />
 
-[Carlos ](https://github.com/CarlosAA10)
+[Carlos Alvarado-Arguello](https://github.com/CarlosAA10)
 [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/CarlosAA10)
 [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/carlos-arguello-dev/)<br />
-<img src="https://www.dalesjewelers.com/wp-content/uploads/2018/10/placeholder-silhouette-male.png" width = "200" />
+<img src="https://avatars2.githubusercontent.com/u/59594632?s=460&u=a3756952ea30a69fd6fca2f1d694429853d7ee79&v=4" width = "200" />
 
 [Tyler Broadway](https://github.com/tylerbroadway)
 [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/tylerbroadway)
 [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/tyler-broadway/)<br />
-<img src="https://www.dalesjewelers.com/wp-content/uploads/2018/10/placeholder-silhouette-male.png" width = "200" />
+<img src="https://avatars0.githubusercontent.com/u/32829986?s=460&u=f29c5f6efdf6ecabc124ca808e4a1c32541a9629&v=4" width = "200" />
 
 <br>
 <br>
 
 ### Key Features
 
-- feature one
-- feature two
-- feature three
-- feature four
-- feature five
+- Extract all orders in database
+- Having the ability to create and post an order to database
+- Return price of requested bars' amount if possible
 
 #### Back end deployed to heroku
 
@@ -39,11 +37,16 @@ You can find the deployed project at https://labs27-ecosoap-teamb-api.herokuapp.
 
 #### back end framework and key libraries go here
 
-- point one
-- point two
-- point three
-
-🚫 List the rest of the back end end features and libraries in the same format as the framework above
+- node-fetch
+- cors
+- express
+- GraphicQL
+- jest
+- knex
+- helmet
+- okta
+- stripe
+- swagger
 
 # APIs
 
