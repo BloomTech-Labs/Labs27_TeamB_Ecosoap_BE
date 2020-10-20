@@ -324,4 +324,5 @@ router.get('/price', (req, res) => {
       res.status(200).json(data);
     });
 });
+
 module.exports = router;
