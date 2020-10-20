@@ -11,19 +11,10 @@
     "lint:fix": "npx eslint --fix .",
     "format": "npx prettier --write \"**/*.+(js|jsx|json|yml|yaml|css|md)\"",
     "knex": "npx knex --knexfile config/knexfile.js",
-    "tests": "npx jest --forceExit",
-    "coverage": "CI=true npx jest --coverage --detectOpenHandles --forceExit"
+    "tests": "npx jest --forceExit"
   },
   "jest": {
-    "testEnvironment": "node",
-    "collectCoverageFrom": [
-      "**/*.js",
-      "!**/node_modules/**",
-      "!**/vendor/**",
-      "!**/__tests__/**",
-      "!**/coverage/**",
-      "!**/apidoc/**"
-    ]
+    "testEnvironment": "node"
   },
   "nodemonConfig": {
     "exec": "npm run start",
@@ -42,6 +33,7 @@
     "axios": "^0.19.2",
     "cookie-parser": "~1.4.4",
     "cors": "^2.8.5",
+    "coverage": "^0.4.1",
     "debug": "~2.6.9",
     "dotenv": "^8.2.0",
     "express": "^4.16.4",

@@ -49,3 +49,13 @@ jobs:
           # Great for troubleshooting
           debug: true
 
+ // "collectCoverageFrom": [
+    //   "**/*.js",
+    //   "!**/node_modules/**",
+    //   "!**/vendor/**",
+    //   "!**/__tests__/**",
+    //   "!**/coverage/**",
+    //   "!**/apidoc/**"
+    // ]
+
+    #  "coverage": "CI=true npx jest --coverage --detectOpenHandles --forceExit"
