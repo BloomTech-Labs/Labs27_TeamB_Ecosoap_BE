@@ -49,6 +49,7 @@ jobs:
           # Great for troubleshooting
           debug: true
 
+
  // "collectCoverageFrom": [
     //   "**/*.js",
     //   "!**/node_modules/**",
