@@ -320,7 +320,7 @@ router.get('/price', (req, res) => {
     }),
   })
     .then((res) => res.json())
-    .then((data) =>{
+    .then((data) => {
       res.status(200).json(data);
     });
 });
